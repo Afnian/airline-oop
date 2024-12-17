@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class PassengerReader {
     private final Scanner scanner;
 
-    public PassengerReader(Scanner scanner, PassengerReader passengerReader) {
+    public PassengerReader(Scanner scanner) {
         this.scanner = scanner;
     }
 
