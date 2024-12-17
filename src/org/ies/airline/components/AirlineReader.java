@@ -23,6 +23,7 @@ public class AirlineReader {
 
         System.out.println("¿Cuantos vuelos hay?");
         int size = scanner.nextInt();
+        scanner.nextLine();
 
         Flight[] flights = new Flight[size];
         for (int i = 0; i < size ; i++) {

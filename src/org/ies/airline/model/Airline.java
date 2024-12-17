@@ -6,11 +6,11 @@ import java.util.Objects;
 public class Airline {
 
     private String name;
-    private Airline[] airlines;
+    private Flight[] flights;
 
-    public Airline(String name, Airline[] airlines) {
+    public Airline(String name, Flight[] flights) {
         this.name = name;
-        this.airlines = airlines;
+        this.flights = flights;
     }
 
     public String getName() {
@@ -21,12 +21,12 @@ public class Airline {
         this.name = name;
     }
 
-    public Airline[] getAirlines() {
-        return airlines;
+    public Flight[] getFlights() {
+        return flights;
     }
 
-    public void setAirlines(Airline[] airlines) {
-        this.airlines = airlines;
+    public void setFlights(Flight[] flights) {
+        this.flights = flights;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class Airline {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Airline airline = (Airline) o;
-        return Objects.equals(name, airline.name) && Objects.deepEquals(airlines, airline.airlines);
+        return Objects.equals(name, airline.name) && Objects.deepEquals(flights, airline.flights);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, Arrays.hashCode(airlines));
+        return Objects.hash(name, Arrays.hashCode(flights));
     }
 }
